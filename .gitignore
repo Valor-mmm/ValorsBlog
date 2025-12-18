@@ -1,0 +1,17 @@
+# Deno
+.env
+lock.json
+
+# Fresh
+_fresh/
+
+# IDEs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
