@@ -56,3 +56,7 @@ Adhere to the following directory structure to maintain organization:
 - `deno task dev`: Start the development server with hot reloading.
 - `deno task check`: Run type checking and linting.
 - `deno task test`: Run the test suite.
+
+## Maintenance
+- **Ignore Files**: Regularly maintain `.gitignore` and `.aiignore` files to ensure they are up-to-date with the project structure and sensitive files.
+- **IDE Context**: Allow AI access to non-sensitive IDE configuration files (like those in `.idea/` that are not ignored by its internal `.gitignore`) to provide better project context. Respect internal IDE ignore files instead of blocking the entire directory at the root level.
