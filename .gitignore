@@ -5,6 +5,9 @@ lock.json
 # Fresh
 _fresh/
 
+node_modules/
+coverage/
+
 # IDEs
 .vscode/
 *.suo
