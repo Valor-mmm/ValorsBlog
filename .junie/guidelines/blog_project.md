@@ -137,6 +137,25 @@ The blog will initially focus on the following topics:
 - **Dark Mode**: Support both system preference (`prefers-color-scheme`) and
   manual toggle via an Island component. Use `class` strategy in Tailwind.
 
+  #### Dark Mode Implementation
+  - **Strategy**: Uses Tailwind CSS `class` strategy.
+  - **Configuration**: Enabled in `static/styles.css` via
+    `@variant dark (&:where(.dark, .dark *));`.
+  - **Persistence**: Theme preference is stored in `localStorage` as `theme`
+    and synchronized with a `theme` cookie for SSR support.
+  - **SSR Integration**: `routes/_app.tsx` reads the `theme` cookie from request
+    headers to apply the `.dark` class during server-side rendering. This
+    provides a perfectly flash-free experience for returning users.
+  - **Flash Prevention**: For first-time users or mismatched states, a small
+    external script (`static/theme-init.js`) is loaded in the `<head>` to
+    apply the theme before the body is rendered.
+  - **No dangerouslySetInnerHTML**: Initialization logic is moved to an
+    external script file to avoid using `dangerouslySetInnerHTML` in the
+    main application shell, improving code cleanliness and following best
+    practices.
+  - **Toggle**: Managed by the `ThemeToggle` island, which syncs the state
+    between `localStorage`, `document.cookie`, and the DOM.
+
   #### Colors
   - **Primary Accents**: Use a "Duo of Pastels" (Blue, Pink) sparingly for
     interaction elements (hover states, active links, tags).

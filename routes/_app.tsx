@@ -2,15 +2,19 @@ import { ComponentChild } from "preact";
 import Navigation from "../components/Navigation.tsx";
 
 export default function App(
-  { Component }: { Component: () => ComponentChild },
+  { Component, req }: { Component: () => ComponentChild; req: Request },
 ) {
+  const cookies = req.headers.get("cookie") || "";
+  const isDark = cookies.includes("theme=dark");
+
   return (
-    <html lang="en">
+    <html lang="en" class={isDark ? "dark" : ""}>
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Valor's Blog</title>
         <link rel="stylesheet" href="/styles.css" />
+        <script src="/theme-init.js" />
       </head>
       <body class="bg-off-white dark:bg-deep-navy text-gray-900 dark:text-off-white min-h-screen transition-colors duration-200">
         <div

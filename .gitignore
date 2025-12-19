@@ -8,6 +8,8 @@ _fresh/
 node_modules/
 coverage/
 
+.output.txt
+
 # IDEs
 .vscode/
 *.suo
