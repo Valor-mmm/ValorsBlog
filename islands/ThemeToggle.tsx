@@ -13,7 +13,8 @@ export default function ThemeToggle() {
     setTheme(initialTheme);
 
     // Sync to cookie for SSR
-    document.cookie = `theme=${initialTheme}; path=/; max-age=31536000; SameSite=Lax`;
+    document.cookie =
+      `theme=${initialTheme}; path=/; max-age=31536000; SameSite=Lax`;
 
     if (initialTheme === "dark") {
       document.documentElement.classList.add("dark");
@@ -26,7 +27,8 @@ export default function ThemeToggle() {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
-    document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
+    document.cookie =
+      `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
     if (newTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {

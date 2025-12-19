@@ -5,6 +5,19 @@
   --color-deep-navy: #0f172a;
   --color-primary: #3b82f6;
   --color-secondary: #ec4899;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(10px, -10px) scale(1.05);
+    }
+    66% {
+      transform: translate(-10px, 10px) scale(0.95);
+    }
+  }
+  --animate-float: float 10s ease-in-out infinite;
 }
 
 @variant dark (&:where(.dark, .dark *));
