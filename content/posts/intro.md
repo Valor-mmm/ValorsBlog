@@ -24,4 +24,17 @@ I have several topics planned for future posts:
 - How we combine Scrum with just two weeks of guarantees and quarterly planning
 - Things I had to learn the hard way while coding
 
+> I am a some citation In multiline
+
+**Some bold text**
+
+**Some italic text**
+
+~~Some strikethrough text~~
+
+```typescript
+const test = "Hello World!";
+console.log(test);
+```
+
 Stay tuned for more!

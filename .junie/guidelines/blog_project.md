@@ -100,7 +100,8 @@ The blog will initially focus on the following topics:
 - **TypeScript**: Use strict TypeScript. Avoid `any`. Prefer interfaces over
   types for public APIs.
 - **Styling**: Use Tailwind CSS utility classes. Avoid custom CSS files unless
-  strictly necessary.
+  strictly necessary. Never use `!important` in styling; instead, use higher
+  selector specificity if needed.
 - **Imports**: Always prefer JSR or standard Deno modules (`@std`). Map them in
   `deno.json`.
 

@@ -13,53 +13,63 @@ export default page(async (ctx) => {
   const html = render(post.content);
 
   return (
-    <article class="max-w-3xl mx-auto">
-      <header class="mb-10">
-        <h1 class="text-4xl font-extrabold text-gray-900 dark:text-off-white mb-4">
+    <article class="max-w-3xl mx-auto px-4 sm:px-0">
+      <header class="mb-12">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-off-white mb-6 leading-tight">
           {post.title}
         </h1>
-        <div class="flex items-center space-x-4 text-gray-500 dark:text-gray-400">
-          <time datetime={post.publishedAt.toISOString()}>
+        <div class="flex flex-wrap items-center gap-4 text-gray-500 dark:text-gray-400">
+          <time
+            datetime={post.publishedAt.toISOString()}
+            class="flex items-center gap-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
+            </svg>
             {new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(
               post.publishedAt,
             )}
           </time>
-          <span>•</span>
+          <span class="hidden sm:inline">•</span>
           <div class="flex gap-2">
             {post.tags.map((tag) => (
-              <span key={tag} class="text-secondary font-medium">#{tag}</span>
+              <span
+                key={tag}
+                class="text-secondary font-medium hover:underline cursor-pointer"
+              >
+                #{tag}
+              </span>
             ))}
           </div>
         </div>
       </header>
 
       <div
-        class="markdown-body prose prose-slate dark:prose-invert max-w-none"
+        class="markdown-body max-w-none"
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
       <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
         <a
           href="/"
-          class="text-primary hover:underline flex items-center gap-2"
+          class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-200 font-medium group"
         >
-          ← Back to Blog
+          <span class="group-hover:-translate-x-1 transition-transform duration-200">
+            ←
+          </span>{" "}
+          Back to Blog
         </a>
       </div>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        .markdown-body {
-          background-color: transparent !important;
-          color: inherit !important;
-        }
-        .markdown-body pre {
-          background-color: #1e293b !important;
-        }
-      `,
-        }}
-      />
     </article>
   );
 });

@@ -18,7 +18,7 @@ export default page(async (_ctx) => {
         {posts.map((post) => (
           <article
             key={post.slug}
-            class="group relative flex flex-col items-start p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:shadow-lg transition-all duration-300"
+            class="group relative flex flex-col items-start p-6 rounded-2xl border border-gray-100 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:shadow-lg transition-all duration-300 hover-lift"
           >
             <h2 class="text-2xl font-bold text-gray-900 dark:text-off-white group-hover:text-primary transition-colors duration-200">
               <a href={`/posts/${post.slug}`}>
