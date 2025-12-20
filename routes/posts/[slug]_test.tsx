@@ -15,6 +15,19 @@ Deno.test("PostPage renders correctly", async () => {
   );
   assertEquals(html.includes("Mock Post 1"), true);
   assertEquals(html.includes("content of mock post 1"), true);
+  assertEquals(html.includes("Updated on"), false);
+});
+
+Deno.test("PostPage renders correctly with updatedAt", async () => {
+  const html = render(
+    await (PostPage as unknown as (props: unknown) => Promise<VNode>)({
+      params: { slug: "mock-post-3" },
+      data: {},
+    }),
+  );
+  assertEquals(html.includes("Mock Post 3"), true);
+  assertEquals(html.includes("Updated on"), true);
+  assertEquals(html.includes("January 4, 2025"), true);
 });
 
 Deno.test("PostPage throws 404 for non-existent post", async () => {

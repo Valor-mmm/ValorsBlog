@@ -5,9 +5,11 @@ export interface Post {
   slug: string;
   title: string;
   publishedAt: Date;
+  updatedAt?: Date;
   description: string;
   tags: string[];
   content: string;
+  readingTime: number;
 }
 
 export async function getPosts(): Promise<Post[]> {
@@ -31,8 +33,15 @@ export async function getPosts(): Promise<Post[]> {
 interface PostMetadata {
   title: string;
   published_at: string;
+  updated_at?: string;
   description: string;
   tags: string[];
+}
+
+export function calculateReadingTime(text: string): number {
+  const wordsPerMinute = 200;
+  const words = text.trim().split(/\s+/).length;
+  return Math.ceil(words / wordsPerMinute);
 }
 
 export async function getPost(slug: string): Promise<Post | null> {
@@ -45,9 +54,13 @@ export async function getPost(slug: string): Promise<Post | null> {
       slug,
       title: metadata.title,
       publishedAt: new Date(metadata.published_at),
+      updatedAt: metadata.updated_at
+        ? new Date(metadata.updated_at)
+        : undefined,
       description: metadata.description,
       tags: metadata.tags,
       content: body,
+      readingTime: calculateReadingTime(body),
     };
   } catch (error) {
     if (error instanceof Deno.errors.NotFound) {

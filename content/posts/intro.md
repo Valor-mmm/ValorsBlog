@@ -1,6 +1,7 @@
 ---
 title: Welcome to My Technical Blog
 published_at: 2025-12-19
+updated_at: 2025-12-20
 description: An introduction to my new blog and what I plan to share here.
 tags: [deno, fresh, introduction]
 ---

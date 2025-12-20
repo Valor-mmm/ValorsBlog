@@ -23,6 +23,10 @@ Deno.test("start() function branches", async () => {
     // We temporarily unset DENO_ENV test to hit the branch
     Deno.env.set("DENO_ENV", "not-test");
     await start(app, []);
+
+    // Test default args
+    Deno.env.set("DENO_ENV", "test");
+    await start(app);
   } finally {
     Builder.prototype.build = originalBuild;
     Builder.prototype.listen = originalListen;
