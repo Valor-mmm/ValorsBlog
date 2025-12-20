@@ -1,10 +1,13 @@
+import { createDefine } from "@fresh/core";
 import Hero from "../components/about/Hero.tsx";
 import ProfessionalJourney from "../components/about/ProfessionalJourney.tsx";
 import TechnicalExpertise from "../components/about/TechnicalExpertise.tsx";
 import WhatIWriteAbout from "../components/about/WhatIWriteAbout.tsx";
 import SocialLinks from "../components/about/SocialLinks.tsx";
 
-export default function AboutMe() {
+const { page } = createDefine();
+
+export default page(function AboutMe() {
   const skills = [
     "TypeScript",
     "Deno",
@@ -24,4 +27,4 @@ export default function AboutMe() {
       <SocialLinks />
     </div>
   );
-}
+});

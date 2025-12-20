@@ -80,7 +80,7 @@ The blog will initially focus on the following topics:
 
 ## Testing Rules
 
-- **Naming**: Use the `.test.ts` suffix for all test files.
+- **Naming**: Use the `_test.ts` suffix for all test files.
 - **Location**: Place logic tests alongside the file they test or in a dedicated
   `tests/` folder if they are integration tests.
 - **Assertions**: Use `jsr:@std/assert` for all assertions.

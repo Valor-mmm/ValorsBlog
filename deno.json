@@ -2,8 +2,9 @@
   "nodeModulesDir": "auto",
   "tasks": {
     "dev": "deno run -A --watch=static/,routes/ main.ts",
-    "check": "deno check **/*.ts **/*.tsx",
-    "test": "deno test -A --parallel",
+    "check": "deno check **/*.ts **/*.tsx && deno lint",
+    "lint": "deno lint",
+    "test": "deno test -A --parallel --coverage",
     "build": "deno run -A main.ts build",
     "preview": "deno run -A main.ts"
   },
