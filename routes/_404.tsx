@@ -1,6 +1,12 @@
+import SEO from "../components/SEO.tsx";
+
 export default function NotFound() {
   return (
     <div class="flex flex-col items-center justify-center py-20 text-center">
+      <SEO
+        title="404 - Page Not Found"
+        description="Oops! The page you are looking for does not exist."
+      />
       <div class="relative mb-8 group">
         <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
         </div>

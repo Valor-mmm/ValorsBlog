@@ -11,11 +11,26 @@ Deno.test("PostPage renders correctly", async () => {
     await (PostPage as unknown as (props: unknown) => Promise<VNode>)({
       params: { slug: "mock-post-1" },
       data: {},
+      url: new URL("https://example.com/posts/mock-post-1"),
     }),
   );
   assertEquals(html.includes("Mock Post 1"), true);
   assertEquals(html.includes("content of mock post 1"), true);
+  assertEquals(
+    html.includes("<title>Mock Post 1 | Valor's Blog</title>"),
+    true,
+  );
+  assertEquals(
+    html.includes(
+      '<meta name="description" content="Description for mock post 1."/>',
+    ),
+    true,
+  );
   assertEquals(html.includes("Updated on"), false);
+
+  // Verify back button appears twice
+  const backButtonCount = (html.match(/Back to Blog/g) || []).length;
+  assertEquals(backButtonCount, 2);
 });
 
 Deno.test("PostPage renders correctly with updatedAt", async () => {
@@ -23,6 +38,7 @@ Deno.test("PostPage renders correctly with updatedAt", async () => {
     await (PostPage as unknown as (props: unknown) => Promise<VNode>)({
       params: { slug: "mock-post-3" },
       data: {},
+      url: new URL("https://example.com/posts/mock-post-3"),
     }),
   );
   assertEquals(html.includes("Mock Post 3"), true);

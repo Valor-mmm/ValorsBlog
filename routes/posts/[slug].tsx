@@ -1,8 +1,21 @@
 import { createDefine, HttpError } from "@fresh/core";
 import { render } from "@deno/gfm";
 import { getPost } from "../../utils/posts.ts";
+import SEO from "../../components/SEO.tsx";
 
 const { page } = createDefine();
+
+const BackButton = () => (
+  <a
+    href="/"
+    class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-200 font-medium group"
+  >
+    <span class="group-hover:-translate-x-1 transition-transform duration-200">
+      ←
+    </span>{" "}
+    Back to Blog
+  </a>
+);
 
 export default page(async (ctx) => {
   const post = await getPost(ctx.params.slug);
@@ -14,6 +27,16 @@ export default page(async (ctx) => {
 
   return (
     <article class="max-w-3xl mx-auto px-4 sm:px-0">
+      <SEO
+        title={post.title}
+        description={post.description}
+        url={ctx.url.href}
+        ogType="article"
+        keywords={post.tags}
+      />
+      <nav class="mb-8">
+        <BackButton />
+      </nav>
       <header class="mb-12">
         <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-off-white mb-6 leading-tight">
           {post.title}
@@ -88,15 +111,7 @@ export default page(async (ctx) => {
       />
 
       <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
-        <a
-          href="/"
-          class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-200 font-medium group"
-        >
-          <span class="group-hover:-translate-x-1 transition-transform duration-200">
-            ←
-          </span>{" "}
-          Back to Blog
-        </a>
+        <BackButton />
       </div>
     </article>
   );

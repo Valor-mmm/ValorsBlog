@@ -34,7 +34,7 @@ Deno.test("getPosts and getPost handle POSTS_DIR fallback", async () => {
     // This will try to read from ./content/posts, which should exist in the project
     const posts = await getPosts();
     assertExists(posts);
-    
+
     // We can also test getPost with a known post in content/posts
     const post = await getPost("intro");
     assertExists(post);
@@ -78,15 +78,15 @@ Deno.test("calculateReadingTime() calculates correct time", () => {
   // Test with a few words
   const text1 = "one two three four five";
   assertEquals(calculateReadingTime(text1), 1);
-  
+
   // Test with more words (200 words = 1 min)
   const text2 = "word ".repeat(200);
   assertEquals(calculateReadingTime(text2), 1);
-  
+
   // Test with 201 words (201 words = 2 min)
   const text3 = "word ".repeat(201);
   assertEquals(calculateReadingTime(text3), 2);
-  
+
   // Test with 400 words (400 words = 2 min)
   const text4 = "word ".repeat(400);
   assertEquals(calculateReadingTime(text4), 2);

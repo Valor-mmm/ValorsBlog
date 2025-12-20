@@ -1,5 +1,6 @@
 import { assertEquals } from "@std/assert";
 import { render } from "preact-render-to-string";
+import { VNode } from "preact";
 import IndexPage from "../routes/index.tsx";
 
 Deno.test("IndexPage renders empty state message when no posts exist", async () => {
@@ -7,8 +8,13 @@ Deno.test("IndexPage renders empty state message when no posts exist", async () 
   const originalDir = Deno.env.get("POSTS_DIR");
   Deno.env.set("POSTS_DIR", tempDir);
   try {
-    // @ts-ignore: IndexPage is an async component function
-    const html = render(await IndexPage({ params: {}, data: {} }));
+    const html = render(
+      await (IndexPage as unknown as (props: unknown) => Promise<VNode>)({
+        params: {},
+        data: {},
+        url: new URL("https://example.com/"),
+      }),
+    );
     assertEquals(html.includes("No posts found"), true);
   } finally {
     if (originalDir) {

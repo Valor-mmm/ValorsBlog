@@ -1,14 +1,18 @@
 import { createDefine } from "@fresh/core";
 import { getPosts } from "../utils/posts.ts";
 import Hero from "../components/Hero.tsx";
+import SEO from "../components/SEO.tsx";
 
 const { page } = createDefine();
 
-export default page(async (_ctx) => {
+export default page(async (ctx) => {
   const posts = await getPosts();
 
   return (
     <div class="space-y-12">
+      <SEO
+        url={ctx.url.href}
+      />
       <Hero />
 
       <section class="grid gap-8">
