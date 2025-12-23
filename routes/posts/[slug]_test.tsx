@@ -26,6 +26,16 @@ Deno.test("PostPage renders correctly", async () => {
     ),
     true,
   );
+  assertEquals(html.includes('<meta name="author" content="Valor"/>'), true);
+  assertEquals(
+    html.includes(
+      '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>',
+    ),
+    true,
+  );
+  assertEquals(html.includes('type="application/ld+json"'), true);
+  assertEquals(html.includes('"@type":"BlogPosting"'), true);
+  assertEquals(html.includes('"headline":"Mock Post 1"'), true);
   assertEquals(html.includes("Updated on"), false);
 
   // Verify back button appears twice

@@ -12,6 +12,7 @@ export default page(async (ctx) => {
     <div class="space-y-12">
       <SEO
         url={ctx.url.href}
+        description="Exploring technology, system design, and engineering leadership through the eyes of a Solution Architect."
       />
       <Hero />
 

@@ -33,6 +33,8 @@ export default page(async (ctx) => {
         url={ctx.url.href}
         ogType="article"
         keywords={post.tags}
+        publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt}
       />
       <nav class="mb-8">
         <BackButton />
