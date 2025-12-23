@@ -5,6 +5,7 @@ import TechnicalExpertise from "../components/about/TechnicalExpertise.tsx";
 import WhatIWriteAbout from "../components/about/WhatIWriteAbout.tsx";
 import Connect from "../components/about/Connect.tsx";
 import SEO from "../components/SEO.tsx";
+import { t } from "../utils/i18n.ts";
 
 const { page } = createDefine();
 
@@ -22,8 +23,8 @@ export default page(function AboutMe(ctx) {
   return (
     <div class="max-w-4xl mx-auto px-4 py-8 space-y-16">
       <SEO
-        title="About Me"
-        description="Learn more about Valor, a software engineer passionate about Deno, React, and building great products."
+        title={t("seo.about.title")}
+        description={t("seo.about.description")}
         url={ctx.url.href}
       />
       <Hero />

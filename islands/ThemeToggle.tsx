@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
+import { t } from "../utils/i18n.ts";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -41,7 +42,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none"
-      aria-label="Toggle Theme"
+      aria-label={t("theme.toggle_label")}
     >
       {theme === "light"
         ? (

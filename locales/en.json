@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "title": "Valor's Blog",
+    "links": {
+      "blog": "Blog",
+      "about": "About Me"
+    }
+  },
+  "hero": {
+    "title_part1": "Architecting",
+    "title_highlight1": "Scalable",
+    "title_part2": "&",
+    "title_highlight2": "Robust",
+    "title_part3": "Systems",
+    "badge_tech_years": "5+ Years in Tech",
+    "badge_tech_lead": "Tech Lead",
+    "badge_solution_architect": "Solution Architect",
+    "description": "Deep dives into modern system design, cloud architecture, and engineering leadership. Sharing the lessons learned from building systems that scale and leading teams that thrive."
+  },
+  "home": {
+    "latest_articles": "Latest Articles",
+    "no_posts": "No posts found",
+    "no_posts_subtitle": "Check back later for new content!",
+    "reading_time": "min read"
+  },
+  "post": {
+    "back_to_blog": "Back to Blog",
+    "not_found": "Post not found",
+    "min_read": "min read",
+    "updated_on": "Updated on"
+  },
+  "about": {
+    "hero": {
+      "photo_placeholder": "Photo",
+      "subtitle": "About Me",
+      "greeting": "Hi, I'm",
+      "name": "Valor",
+      "role": "Solution Architect & Tech Enthusiast",
+      "description": "Passionate about building scalable applications, leading technical teams, and sharing knowledge through writing. Currently navigating the exciting challenges of architecture and system design."
+    },
+    "journey": {
+      "title": "Professional Journey",
+      "present": "Present",
+      "role1": "Solution Architect",
+      "desc1": "Leading the architectural vision for complex systems, bridging the gap between business requirements and technical implementation. Ensuring robustness, scalability, and maintainability across the stack.",
+      "period2": "2018 — 2023",
+      "role2": "Technical Lead & Developer",
+      "desc2": "Spent five years developing full-stack applications and eventually leading technical teams. Focused on delivering high-quality software and mentoring developers to reach their full potential."
+    },
+    "expertise": {
+      "title": "Technical Expertise",
+      "arch_title": "Architecture & Strategy",
+      "arch_item1": "System Design & Scalability",
+      "arch_item2": "Microservices Architecture",
+      "arch_item3": "Cloud Infrastructure (AWS/Azure)",
+      "arch_item4": "Technical Leadership & Mentoring",
+      "tech_title": "Core Technologies"
+    },
+    "writing": {
+      "title": "What I Write About",
+      "arch_title": "Software Architecture",
+      "arch_desc": "Exploring patterns, trade-offs, and best practices for building robust and maintainable systems in a fast-paced environment.",
+      "workflow_title": "Development Workflows",
+      "workflow_desc": "Deep dives into tools and techniques that improve developer productivity, from CI/CD to local environment setups.",
+      "leadership_title": "Engineering Leadership",
+      "leadership_desc": "Insights on leading teams, managing technical debt, and fostering a healthy engineering culture that delivers value.",
+      "modern_web_title": "Modern Web & Tools",
+      "modern_web_desc": "My experiments and thoughts on new technologies like Deno, Fresh, Tailwind CSS, and the evolving web ecosystem."
+    },
+    "connect": {
+      "title": "Let's Connect",
+      "desc": "Feel free to reach out for collaborations, questions, or just to chat about tech!",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "theme": {
+    "toggle_label": "Toggle Theme"
+  },
+  "footer": {
+    "copyright": "Valor's Blog. Built with Deno & Fresh."
+  },
+  "seo": {
+    "site_name": "Valor's Blog",
+    "default_description": "Welcome to Valor's Blog - exploring technology, development, and more.",
+    "home": {
+      "description": "Exploring technology, system design, and engineering leadership through the eyes of a Solution Architect."
+    },
+    "about": {
+      "title": "About Me",
+      "description": "Learn more about Valor, a software engineer passionate about Deno, React, and building great products."
+    },
+    "not_found": {
+      "title": "404 - Page Not Found",
+      "description": "Oops! The page you are looking for does not exist."
+    }
+  },
+  "errors": {
+    "not_found": "Oops! Page not found",
+    "go_home": "Go back home"
+  }
+}

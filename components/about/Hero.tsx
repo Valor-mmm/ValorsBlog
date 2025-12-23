@@ -1,3 +1,5 @@
+import { t } from "../../utils/i18n.ts";
+
 export default function Hero() {
   return (
     <section class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -18,24 +20,23 @@ export default function Hero() {
             />
           </svg>
           <span class="text-xs font-medium uppercase tracking-wider">
-            Photo
+            {t("about.hero.photo_placeholder")}
           </span>
         </div>
       </div>
       <div class="space-y-4 text-center md:text-left">
         <p class="text-primary font-bold uppercase tracking-widest text-sm">
-          About Me
+          {t("about.hero.subtitle")}
         </p>
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-off-white">
-          Hi, I'm <span class="text-primary">Valor</span>
+          {t("about.hero.greeting")}{" "}
+          <span class="text-primary">{t("about.hero.name")}</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium">
-          Solution Architect & Tech Enthusiast
+          {t("about.hero.role")}
         </p>
         <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
-          Passionate about building scalable applications, leading technical
-          teams, and sharing knowledge through writing. Currently navigating the
-          exciting challenges of architecture and system design.
+          {t("about.hero.description")}
         </p>
       </div>
     </section>

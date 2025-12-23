@@ -1,3 +1,5 @@
+import { t } from "../utils/i18n.ts";
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -21,10 +23,9 @@ export default function SEO({
   updatedAt,
   author = "Valor",
 }: SEOProps) {
-  const siteName = "Valor's Blog";
+  const siteName = t("seo.site_name");
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
-  const defaultDescription =
-    "Welcome to Valor's Blog - exploring technology, development, and more.";
+  const defaultDescription = t("seo.default_description");
   const metaDescription = description || defaultDescription;
   const metaImage = image
     ? (image.startsWith("https")

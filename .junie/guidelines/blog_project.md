@@ -78,6 +78,19 @@ The blog will initially focus on the following topics:
 - How we combine Scrum with just two weeks of guarantees and quarterly planning
 - Things I had to learn the hard way while coding
 
+## Internationalization (i18n)
+
+- **Centralized Strings**: All user-facing texts must be stored in JSON files
+  within the `locales/` directory.
+- **English as Default**: `locales/en.json` is the primary source of truth for
+  all UI strings, SEO metadata, and error messages.
+- **Utility**: Use the `t()` function from `utils/i18n.ts` to retrieve strings.
+- **Notation**: Use dot notation to access nested keys (e.g.,
+  `t("nav.links.blog")`).
+- **No Hardcoded Strings**: Avoid hardcoding user-facing strings directly in
+  code files (`.tsx`). Always extract them to the JSON files. This ensures
+  consistency and makes future translation easier.
+
 ## Testing Rules
 
 - **Naming**: Use the `_test.ts` suffix for all test files.

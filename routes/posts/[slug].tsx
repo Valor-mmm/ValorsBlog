@@ -2,6 +2,7 @@ import { createDefine, HttpError } from "@fresh/core";
 import { render } from "@deno/gfm";
 import { getPost } from "../../utils/posts.ts";
 import SEO from "../../components/SEO.tsx";
+import { t } from "../../utils/i18n.ts";
 
 const { page } = createDefine();
 
@@ -13,14 +14,14 @@ const BackButton = () => (
     <span class="group-hover:-translate-x-1 transition-transform duration-200">
       ←
     </span>{" "}
-    Back to Blog
+    {t("post.back_to_blog")}
   </a>
 );
 
 export default page(async (ctx) => {
   const post = await getPost(ctx.params.slug);
   if (!post) {
-    throw new HttpError(404, "Post not found");
+    throw new HttpError(404, t("post.not_found"));
   }
 
   const html = render(post.content);
@@ -80,13 +81,13 @@ export default page(async (ctx) => {
                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            {post.readingTime} min read
+            {post.readingTime} {t("post.min_read")}
           </span>
           {post.updatedAt && (
             <>
               <span class="hidden sm:inline">•</span>
               <span class="italic">
-                Updated on{" "}
+                {t("post.updated_on")}{" "}
                 {new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(
                   post.updatedAt,
                 )}

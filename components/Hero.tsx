@@ -1,3 +1,5 @@
+import { t } from "../utils/i18n.ts";
+
 export default function Hero() {
   return (
     <section class="relative overflow-hidden py-16 mb-16 rounded-3xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm group">
@@ -24,26 +26,27 @@ export default function Hero() {
 
       <div class="relative px-8 sm:px-16 flex flex-col items-start">
         <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-off-white mb-6">
-          Architecting <span class="text-primary">Scalable</span> <br />
-          & <span class="text-secondary">Robust</span> Systems
+          {t("hero.title_part1")}{" "}
+          <span class="text-primary">{t("hero.title_highlight1")}</span> <br />
+          {t("hero.title_part2")}{" "}
+          <span class="text-secondary">{t("hero.title_highlight2")}</span>{" "}
+          {t("hero.title_part3")}
         </h1>
 
         <div class="flex flex-wrap gap-3 mb-10">
           <span class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
-            5+ Years in Tech
+            {t("hero.badge_tech_years")}
           </span>
           <span class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
-            Tech Lead
+            {t("hero.badge_tech_lead")}
           </span>
           <span class="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary-300 border border-primary/20">
-            Solution Architect
+            {t("hero.badge_solution_architect")}
           </span>
         </div>
 
         <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed mb-8">
-          Deep dives into modern system design, cloud architecture, and
-          engineering leadership. Sharing the lessons learned from building
-          systems that scale and leading teams that thrive.
+          {t("hero.description")}
         </p>
 
         <div class="h-1.5 w-24 bg-gradient-to-r from-primary to-secondary rounded-full">

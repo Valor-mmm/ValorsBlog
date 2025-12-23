@@ -2,6 +2,7 @@ import { createDefine } from "@fresh/core";
 import { getPosts } from "../utils/posts.ts";
 import Hero from "../components/Hero.tsx";
 import SEO from "../components/SEO.tsx";
+import { t } from "../utils/i18n.ts";
 
 const { page } = createDefine();
 
@@ -12,13 +13,13 @@ export default page(async (ctx) => {
     <div class="space-y-12">
       <SEO
         url={ctx.url.href}
-        description="Exploring technology, system design, and engineering leadership through the eyes of a Solution Architect."
+        description={t("seo.home.description")}
       />
       <Hero />
 
       <section class="grid gap-8">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-off-white mb-4">
-          Latest Articles
+          {t("home.latest_articles")}
         </h2>
         {posts.length > 0
           ? (
@@ -41,7 +42,7 @@ export default page(async (ctx) => {
                       )}
                   </time>
                   <span>•</span>
-                  <span>{post.readingTime} min read</span>
+                  <span>{post.readingTime} {t("home.reading_time")}</span>
                 </div>
                 <p class="mt-4 text-gray-600 dark:text-gray-400 line-clamp-3">
                   {post.description}
@@ -63,10 +64,10 @@ export default page(async (ctx) => {
             <div class="text-center py-20 bg-gray-50 dark:bg-gray-900/30 rounded-3xl border-2 border-dashed border-gray-200 dark:border-gray-800">
               <div class="text-6xl mb-4">📝</div>
               <h3 class="text-xl font-semibold text-gray-900 dark:text-off-white">
-                No posts found
+                {t("home.no_posts")}
               </h3>
               <p class="mt-2 text-gray-600 dark:text-gray-400">
-                Check back later for new content!
+                {t("home.no_posts_subtitle")}
               </p>
             </div>
           )}

@@ -1,5 +1,6 @@
 import { ComponentChild } from "preact";
 import Navigation from "../components/Navigation.tsx";
+import { t } from "../utils/i18n.ts";
 
 export default function App(
   { Component, req }: { Component: () => ComponentChild; req: Request },
@@ -27,8 +28,7 @@ export default function App(
             <Component />
           </main>
           <footer class="py-10 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()}{" "}
-            Valor's Blog. Built with Deno & Fresh.
+            &copy; {new Date().getFullYear()} {t("footer.copyright")}
           </footer>
         </div>
       </body>
