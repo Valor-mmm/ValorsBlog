@@ -1,10 +1,8 @@
 import { App, staticFiles } from "@fresh/core";
 import { tailwind } from "@fresh/plugin-tailwind";
-import { dirname, fromFileUrl, join } from "@std/path";
 import { securityMiddleware } from "./utils/security.ts";
 import { generateSitemap } from "./utils/sitemap.ts";
 
-const __dirname = dirname(fromFileUrl(import.meta.url));
 export const app = new App();
 
 app.use(securityMiddleware);
@@ -23,7 +21,7 @@ app.get("/sitemap.xml", async (ctx) => {
   });
 });
 
-app.fsRoutes(join(__dirname, "routes"));
+app.fsRoutes();
 
 export async function start<T>(app: App<T>, args: string[] = Deno.args) {
   const { Builder } = await import("@fresh/core/dev");
