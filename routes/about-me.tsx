@@ -3,7 +3,7 @@ import Hero from "../components/about/Hero.tsx";
 import ProfessionalJourney from "../components/about/ProfessionalJourney.tsx";
 import TechnicalExpertise from "../components/about/TechnicalExpertise.tsx";
 import WhatIWriteAbout from "../components/about/WhatIWriteAbout.tsx";
-import SocialLinks from "../components/about/SocialLinks.tsx";
+import Connect from "../components/about/Connect.tsx";
 import SEO from "../components/SEO.tsx";
 
 const { page } = createDefine();
@@ -30,7 +30,7 @@ export default page(function AboutMe(ctx) {
       <ProfessionalJourney />
       <TechnicalExpertise skills={skills} />
       <WhatIWriteAbout />
-      <SocialLinks />
+      <Connect />
     </div>
   );
 });

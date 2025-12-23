@@ -1,4 +1,4 @@
-export default function SocialLinks() {
+export default function Connect() {
   return (
     <section class="pt-12 border-t border-gray-200 dark:border-gray-800">
       <div class="bg-primary/5 dark:bg-primary/10 rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
@@ -14,21 +14,9 @@ export default function SocialLinks() {
         <div class="flex flex-wrap justify-center gap-4">
           <a
             href="#"
-            class="group flex items-center px-6 py-3 rounded-2xl bg-gray-900 dark:bg-off-white text-white dark:text-deep-navy font-bold hover:translate-y-[-2px] transition-all duration-200 shadow-lg shadow-gray-900/10 dark:shadow-none"
-          >
-            GitHub
-          </a>
-          <a
-            href="#"
             class="group flex items-center px-6 py-3 rounded-2xl bg-[#0077b5] text-white font-bold hover:translate-y-[-2px] transition-all duration-200 shadow-lg shadow-[#0077b5]/20"
           >
             LinkedIn
-          </a>
-          <a
-            href="#"
-            class="group flex items-center px-6 py-3 rounded-2xl bg-black dark:bg-gray-800 text-white font-bold hover:translate-y-[-2px] transition-all duration-200 shadow-lg"
-          >
-            X (Twitter)
           </a>
         </div>
       </div>
