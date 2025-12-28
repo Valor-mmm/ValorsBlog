@@ -21,7 +21,8 @@
     "preact/test-utils": "npm:preact@10/test-utils",
     "preact-render-to-string": "npm:preact-render-to-string@6",
     "tailwindcss": "npm:tailwindcss@^4.0.0",
-    "happy-dom": "https://esm.sh/happy-dom@15.7.4"
+    "happy-dom": "https://esm.sh/happy-dom@15.7.4",
+    "i18next": "npm:i18next@^23.0.0"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

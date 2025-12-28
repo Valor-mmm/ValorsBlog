@@ -39,6 +39,7 @@
     "npm:esbuild@~0.25.5": "0.25.7",
     "npm:github-slugger@2": "2.0.0",
     "npm:he@^1.2.0": "1.2.0",
+    "npm:i18next@23": "23.16.8",
     "npm:katex@0.16": "0.16.27",
     "npm:marked-alert@2": "2.1.2_marked@12.0.2",
     "npm:marked-footnote@^1.2.0": "1.4.0_marked@12.0.2",
@@ -205,6 +206,9 @@
   "npm": {
     "@alloc/quick-lru@5.2.0": {
       "integrity": "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw=="
+    },
+    "@babel/runtime@7.28.4": {
+      "integrity": "sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ=="
     },
     "@esbuild/aix-ppc64@0.25.7": {
       "integrity": "sha512-uD0kKFHh6ETr8TqEtaAcV+dn/2qnYbH/+8wGEdY70Qf7l1l/jmBUbrmQqwiPKAQE6cOQ7dTj6Xr0HzQDGHyceQ==",
@@ -577,6 +581,12 @@
         "entities"
       ]
     },
+    "i18next@23.16.8": {
+      "integrity": "sha512-06r/TitrM88Mg5FdUXAKL96dJMzgqLE5dv3ryBAra4KCwD9mJ4ndOTS95ZuymIGoE+2hzfdaMak2X11/es7ZWg==",
+      "dependencies": [
+        "@babel/runtime"
+      ]
+    },
     "is-plain-object@5.0.0": {
       "integrity": "sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q=="
     },
@@ -769,6 +779,7 @@
       "jsr:@std/front-matter@1",
       "jsr:@std/fs@1",
       "jsr:@std/path@1",
+      "npm:i18next@23",
       "npm:preact-render-to-string@6",
       "npm:preact@10",
       "npm:tailwindcss@4"
