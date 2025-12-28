@@ -25,6 +25,7 @@ export async function securityMiddleware(ctx: Context<unknown>) {
     "form-action 'self'",
     "frame-ancestors 'none'",
     "upgrade-insecure-requests",
+    "media-src 'self' data:",
   ].join("; ");
 
   resp.headers.set("Content-Security-Policy", csp);

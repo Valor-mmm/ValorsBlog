@@ -25,4 +25,5 @@ Deno.test("securityMiddleware adds security headers", async () => {
   assertEquals(csp?.includes("default-src 'self'"), true);
   assertEquals(csp?.includes("upgrade-insecure-requests"), true);
   assertEquals(csp?.includes("frame-ancestors 'none'"), true);
+  assertEquals(csp?.includes("media-src 'self' data:"), true);
 });
