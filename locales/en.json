@@ -12,7 +12,7 @@
     "title_part2": "&",
     "title_highlight2": "Robust",
     "title_part3": "Systems",
-    "badge_tech_years": "5+ Years in Tech",
+    "badge_tech_years": "8+ Years in Tech",
     "badge_tech_lead": "Tech Lead",
     "badge_solution_architect": "Solution Architect",
     "description": "Deep dives into modern system design, cloud architecture, and engineering leadership. Sharing the lessons learned from building systems that scale and leading teams that thrive."
@@ -34,26 +34,84 @@
       "photo_placeholder": "Photo",
       "subtitle": "About Me",
       "greeting": "Hi, I'm",
-      "name": "Valor",
-      "role": "Solution Architect & Tech Enthusiast",
-      "description": "Passionate about building scalable applications, leading technical teams, and sharing knowledge through writing. Currently navigating the exciting challenges of architecture and system design."
+      "name": "Stefan Hauser",
+      "role": "Tech Lead & Solution Architect",
+      "description": "Accomplished Tech Lead and Solution Architect adept in React, Next.js, and TypeScript. Passionate about building scalable applications, leading technical teams, and sharing knowledge through writing."
     },
     "journey": {
       "title": "Professional Journey",
-      "present": "Present",
-      "role1": "Solution Architect",
-      "desc1": "Leading the architectural vision for complex systems, bridging the gap between business requirements and technical implementation. Ensuring robustness, scalability, and maintainability across the stack.",
-      "period2": "2018 — 2023",
-      "role2": "Technical Lead & Developer",
-      "desc2": "Spent five years developing full-stack applications and eventually leading technical teams. Focused on delivering high-quality software and mentoring developers to reach their full potential."
+      "items": [
+        {
+          "period": "Oct 2023 — Dec 2025",
+          "roles": [
+            {
+              "title": "Tech Lead Frontend",
+              "description": "Leading a cross-functional frontend team for a white-label eCommerce shop. Responsible for technical architecture, hiring, onboarding, and mentoring developers.",
+              "tags": [
+                "Leadership",
+                "Architecture",
+                "Next.js",
+                "React",
+                "GraphQL"
+              ]
+            }
+          ]
+        },
+        {
+          "period": "Nov 2022 — Present",
+          "is_present": true,
+          "roles": [
+            {
+              "title": "Solution Architect",
+              "description": "Responsible for the frontend architecture of an eCommerce white label shop and representative in the company-wide software architecture community. Designing target solutions and ensuring technical compliance.",
+              "tags": ["Architecture", "C4 Model", "Strategy", "Leadership"]
+            }
+          ]
+        },
+        {
+          "period": "Apr 2020 — Oct 2023",
+          "roles": [
+            {
+              "title": "Frontend Developer",
+              "description": "Developed features for a white label eCommerce shop and API gateway. Focused on observability, monitoring, and CI/CD pipeline improvements.",
+              "tags": ["React", "TypeScript", "CI/CD", "Monitoring"]
+            }
+          ]
+        },
+        {
+          "period": "Sep 2016 — Feb 2020",
+          "roles": [
+            {
+              "title": "Working Student & Intern IT",
+              "description": "Full-stack development at Knowis AG, working on fintech platforms. Gained experience in Scrum, automated deployments, and migrating legacy frameworks to React.",
+              "tags": ["Java", "JavaScript", "Python", "React", "Scrum"]
+            }
+          ]
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "period": "2018 — 2020",
+          "study": "M.Sc. IT Focus Software Engineering",
+          "grade": "1.9"
+        },
+        {
+          "period": "2014 — 2018",
+          "study": "B.Sc. Information Technology",
+          "grade": "1.9"
+        }
+      ]
     },
     "expertise": {
       "title": "Technical Expertise",
       "arch_title": "Architecture & Strategy",
-      "arch_item1": "System Design & Scalability",
-      "arch_item2": "Microservices Architecture",
-      "arch_item3": "Cloud Infrastructure (AWS/Azure)",
-      "arch_item4": "Technical Leadership & Mentoring",
+      "arch_item1": "Frontend Architecture",
+      "arch_item2": "Technical Leadership",
+      "arch_item3": "Solution Design (C4 Model)",
+      "arch_item4": "System Scalability",
       "tech_title": "Core Technologies"
     },
     "writing": {
@@ -87,7 +145,7 @@
     },
     "about": {
       "title": "About Me",
-      "description": "Learn more about Valor, a software engineer passionate about Deno, React, and building great products."
+      "description": "Learn more about Stefan Hauser, a Tech Lead and Solution Architect passionate about React, Next.js, and building scalable products."
     },
     "not_found": {
       "title": "404 - Page Not Found",
