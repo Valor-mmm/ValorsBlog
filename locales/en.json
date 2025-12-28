@@ -43,6 +43,7 @@
       "items": [
         {
           "period": "Oct 2023 — Dec 2025",
+          "company": "Witt Gruppe",
           "roles": [
             {
               "title": "Tech Lead Frontend",
@@ -59,6 +60,7 @@
         },
         {
           "period": "Nov 2022 — Present",
+          "company": "Witt Gruppe",
           "is_present": true,
           "roles": [
             {
@@ -70,6 +72,7 @@
         },
         {
           "period": "Apr 2020 — Oct 2023",
+          "company": "Witt Gruppe",
           "roles": [
             {
               "title": "Frontend Developer",
@@ -80,6 +83,7 @@
         },
         {
           "period": "Sep 2016 — Feb 2020",
+          "company": "Knowis AG",
           "roles": [
             {
               "title": "Working Student & Intern IT",

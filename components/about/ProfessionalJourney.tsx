@@ -8,6 +8,7 @@ interface JourneyRole {
 
 interface JourneyItem {
   period: string;
+  company: string;
   is_present?: boolean;
   roles: JourneyRole[];
 }
@@ -38,10 +39,15 @@ export default function ProfessionalJourney() {
             >
               {item.period}
             </time>
+            <div class="mt-1">
+              <span class="text-xl font-bold text-gray-900 dark:text-off-white">
+                {item.company}
+              </span>
+            </div>
             <div class="mt-4 space-y-8">
               {item.roles.map((role, rIdx) => (
                 <div key={rIdx} class="group">
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-off-white group-hover:text-primary transition-colors">
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-off-white group-hover:text-primary transition-colors">
                     {role.title}
                   </h3>
                   <p class="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">

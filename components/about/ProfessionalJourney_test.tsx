@@ -10,5 +10,7 @@ Deno.test("ProfessionalJourney component renders correctly", () => {
   assertEquals(html.includes("Frontend Developer"), true);
   assertEquals(html.includes("Architecture"), true); // Tag
   assertEquals(html.includes("TypeScript"), true); // Tag
+  assertEquals(html.includes("MediaMarktSaturn Technology"), true);
+  assertEquals(html.includes("Knowis AG"), true);
   assertEquals(html.includes("2020"), true);
 });
