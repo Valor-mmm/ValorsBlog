@@ -95,12 +95,15 @@
       "items": [
         {
           "period": "2018 — 2020",
-          "study": "M.Sc. IT Focus Software Engineering",
+          "study": "M.Sc. Information Technology",
+          "focus": "Focus on Software Engineering",
+          "university": "OTH Regensburg",
           "grade": "1.9"
         },
         {
           "period": "2014 — 2018",
           "study": "B.Sc. Information Technology",
+          "university": "OTH Regensburg",
           "grade": "1.9"
         }
       ]

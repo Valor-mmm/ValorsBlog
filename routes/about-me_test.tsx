@@ -13,4 +13,6 @@ Deno.test("AboutMe page renders correctly", async () => {
   );
   assertEquals(html.includes("About Me"), true);
   assertEquals(html.includes("Solution Architect"), true);
+  assertEquals(html.includes("OTH Regensburg"), true);
+  assertEquals(html.includes("Focus on Software Engineering"), true);
 });
